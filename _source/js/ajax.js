@@ -3,8 +3,65 @@ var editor_settings = {
     height: 300,
     extraPlugins: 'autogrow',
     autoGrow_minHeight: 300,
-    autoGrow_maxHeight: 0
+    autoGrow_maxHeight: 0,
+    toolbarGroups: [{
+            name: 'document',
+            groups: ['mode', 'document', 'doctools']
+        },
+        {
+            name: 'clipboard',
+            groups: ['clipboard', 'undo']
+        },
+        {
+            name: 'editing',
+            groups: ['find', 'selection', 'spellchecker', 'editing']
+        },
+        {
+            name: 'forms',
+            groups: ['forms']
+        },
+        '/',
+        {
+            name: 'basicstyles',
+            groups: ['basicstyles', 'cleanup']
+        },
+        {
+            name: 'paragraph',
+            groups: ['list', 'indent', 'blocks', 'align', 'bidi', 'paragraph']
+        },
+        {
+            name: 'links',
+            groups: ['links']
+        },
+        {
+            name: 'insert',
+            groups: ['insert']
+        },
+        '/',
+        {
+            name: 'styles',
+            groups: ['styles']
+        },
+        {
+            name: 'colors',
+            groups: ['colors']
+        },
+        {
+            name: 'tools',
+            groups: ['tools']
+        },
+        {
+            name: 'others',
+            groups: ['others']
+        },
+        {
+            name: 'about',
+            groups: ['about']
+        }
+    ],
+    removeButtons: 'Save,Paste,PasteText,PasteFromWord,About,Language,BidiRtl,BidiLtr,PageBreak,Flash'
 };
+
 // функция получения контента каталогов
 function getContent(path) {
     $.ajax({
