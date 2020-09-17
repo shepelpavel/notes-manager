@@ -1,6 +1,9 @@
 var editor_settings = {
     width: '100%',
-    height: 500
+    height: 300,
+    extraPlugins: 'autogrow',
+    autoGrow_minHeight: 300,
+    autoGrow_maxHeight: 0
 };
 // функция получения контента каталогов
 function getContent(path) {
