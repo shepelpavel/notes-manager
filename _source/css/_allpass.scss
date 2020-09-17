@@ -1,0 +1,36 @@
+.allpass {
+    &__item {
+        margin: 8px 0;
+
+        &_field {
+            min-height: 14px;
+            border: 1px solid $lightcolor5;
+            margin: 2px 0;
+            overflow: hidden;
+            font-size: 12px;
+            padding: 2px 4px;
+        }
+
+        &_name {
+            background-color: $darkcolor5;
+        }
+        &_label {
+            font-size: 10px;
+            color: $lightcolor5;
+        }
+    }
+
+    &__buttons {
+        &_button {
+            width: 160px;
+            margin: 16px 0;
+            opacity: 1;
+            transition: .6s;
+        }
+
+        &_backup {
+            display: none;
+            opacity: 0;
+        }
+    }
+}

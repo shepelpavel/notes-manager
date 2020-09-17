@@ -1,0 +1,15 @@
+# node
+node_modules
+package-lock.json
+
+# assets
+public/_assets
+
+#htpasswd
+.htpasswd
+
+#data
+data/*
+
+#gitkeep
+!*.gitkeep

@@ -1,0 +1,90 @@
+body {
+    background-color: $black;
+    color: $light;
+    font-family: "Exo 2", "Courier New", Courier, monospace;
+
+    #page {
+        background-color: $dark3;
+        width: 100%;
+        min-height: 100vh;
+        position: absolute;
+
+        @import 'menu';
+        @import 'content';
+    }
+}
+@import 'scroll';
+
+.button {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $darkcolor9;
+    border: 1px solid $lightcolor1;
+    transition: .3s;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: $black9;
+        border: 1px solid $lightcolor3;
+    }
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid $darkcolor9;
+}
+
+.checkbox {
+    input[type="checkbox"] {
+        display: none;
+
+        &+label::after {
+            content: none;
+        }
+
+        &:checked+label::after {
+            content: '';
+        }
+
+        &:focus+label::before {
+            outline: none;
+        }
+    }
+
+    label {
+        position: relative;
+        display: block;
+        padding-left: 26px;
+        user-select: none;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            display: inline-block;
+        }
+
+        &::before {
+            height: 16px;
+            width: 16px;
+            border: 1px solid $lightcolor5;
+            left: 0;
+            top: -1px;
+        }
+
+        &::after {
+            height: 5px;
+            width: 9px;
+            border-left: 2px solid;
+            border-bottom: 2px solid;
+            transform: rotate(-45deg);
+            left: 4px;
+            top: 3px;
+        }
+    }
+}
+
+@import 'animation';
