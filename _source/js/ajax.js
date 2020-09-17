@@ -1,3 +1,7 @@
+var editor_settings = {
+    width: '100%',
+    height: 500
+};
 // функция получения контента каталогов
 function getContent(path) {
     $.ajax({
@@ -30,6 +34,7 @@ function getNotes(name) {
             }, 300, function () {
                 $('#page').html(data);
                 $(window).scrollTop(0);
+                CKEDITOR.replace('editor', editor_settings);
             });
             $('#page').animate({
                 opacity: 1
@@ -89,6 +94,7 @@ function getAddNotesPage() {
             }, 300, function () {
                 $('#page').html(data);
                 $(window).scrollTop(0);
+                CKEDITOR.replace('editor', editor_settings);
             });
             $('#page').animate({
                 opacity: 1
@@ -220,7 +226,7 @@ $(document).ready(function () {
     $('body').on('click', '.js-newnotes-save', function () {
         var name = $('.js-input-title').val();
         var arr = {
-            note: $('.js-input-note').val()
+            note: CKEDITOR.instances.editor.getData()
         };
         if (name) {
             saveNewNotes(name, arr);
@@ -236,7 +242,7 @@ $(document).ready(function () {
         if (u_confirm) {
             var name = $('.js-input-title').val();
             var arr = {
-                note: $('.js-input-note').val()
+                note: CKEDITOR.instances.editor.getData()
             };
             if (name, arr) {
                 saveNotes(name, arr);
