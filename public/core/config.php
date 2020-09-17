@@ -7,7 +7,7 @@ $BASEPATH       = substr($_SERVER['DOCUMENT_ROOT'], 0, strrpos($_SERVER['DOCUMEN
 $ROOTPATH       = substr($_SERVER['DOCUMENT_ROOT'], 0, strlen($_SERVER['DOCUMENT_ROOT']) - 7);
 
 // meta
-$title          = 'PssMgr';
+$title          = 'NtsMgr';
 
 // version
-$ver            = '?v=0.1.6';
+$ver            = '?v=0.1.1';

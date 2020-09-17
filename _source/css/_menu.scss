@@ -18,68 +18,6 @@
         &_link {
             margin-top: 1rem;
         }
-
-        &_generator {
-            .generator {
-                margin-top: 0.5rem;
-
-                &_title {
-                    text-align: center;
-                    font-size: 120%;
-                }
-
-                &_item {
-                    margin-top: 1rem;
-                }
-
-                &_length {
-                    .input {
-                        width: 100%;
-                        display: block;
-                        margin: 0;
-                        border: 1px solid $lightcolor5;
-                        background-color: $dark7;
-                        padding: 6px;
-                        color: #fff;
-                        font-family: "Exo 2", "Courier New", Courier, monospace;
-                        resize: none;
-                        min-height: 26px;
-                        box-sizing: border-box;
-                        text-align: center;
-                    }
-
-                    /* Chrome, Safari, Edge, Opera */
-                    input::-webkit-outer-spin-button,
-                    input::-webkit-inner-spin-button {
-                        -webkit-appearance: none;
-                        margin: 0;
-                    }
-
-                    /* Firefox */
-                    input[type=number] {
-                        -moz-appearance: textfield;
-                    }
-                }
-
-                &_result {
-                    .result {
-                        background-color: $dark7;
-                        border: 1px solid $light3;
-                        min-height: 26px;
-                        text-align: center;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        align-items: center;
-                        padding: 6px;
-                        white-space: normal;
-                        overflow-wrap: break-word;
-                        word-wrap: break-word;
-                        word-break: break-all;
-                    }
-                }
-            }
-        }
     }
 
     &.open {

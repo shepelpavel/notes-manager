@@ -64,29 +64,12 @@ $_SESSION['breadcrumbs']            = $breadcrumbs;
         <div class="pass__input pass__input_title">
             <input class="js-input-title" type="text" name="title" autocomplete="off" value="<?= $_SESSION['thisname'] ?>">
         </div>
-        <div class="pass__input pass__input_link js-field">
-            <input class="js-input-link js-crypt <?= empty($_SESSION['file_res']['link']) ? 'decrypted empty' : 'crypted' ?>" type="text" name="link" autocomplete="off" value="<?= $_SESSION['file_res']['link'] ?>" <?= empty($_SESSION['file_res']['link']) ? '' : 'disabled' ?>>
-            <img class="pass__input_crypt js-crypt-decrypt <?= empty($_SESSION['file_res']['link']) ? 'hide decrypted' : 'crypted' ?>" src="/_assets/img/svg/eye.svg" alt="Crypt/Decrypt">
-            <img class="pass__input_copy js-pass-copy <?= empty($_SESSION['file_res']['link']) ? 'hide' : '' ?>" src="/_assets/img/svg/copy.svg" alt="Copy">
-        </div>
-        <div class="pass__input pass__input_login js-field">
-            <input class="js-input-login js-crypt <?= empty($_SESSION['file_res']['login']) ? 'decrypted empty' : 'crypted' ?>" type="text" name="login" autocomplete="off" value="<?= $_SESSION['file_res']['login'] ?>" <?= empty($_SESSION['file_res']['login']) ? '' : 'disabled' ?>>
-            <img class="pass__input_crypt js-crypt-decrypt <?= empty($_SESSION['file_res']['login']) ? 'hide decrypted' : 'crypted' ?>" src="/_assets/img/svg/eye.svg" alt="Crypt/Decrypt">
-            <img class="pass__input_copy js-pass-copy <?= empty($_SESSION['file_res']['login']) ? 'hide' : '' ?>" src="/_assets/img/svg/copy.svg" alt="Copy">
-        </div>
-        <div class="pass__input pass__input_pass js-field">
-            <input class="js-input-pass js-crypt <?= empty($_SESSION['file_res']['pass']) ? 'decrypted empty' : 'crypted' ?>" type="text" name="pass" autocomplete="off" value="<?= $_SESSION['file_res']['pass'] ?>" <?= empty($_SESSION['file_res']['pass']) ? '' : 'disabled' ?>>
-            <img class="pass__input_crypt js-crypt-decrypt <?= empty($_SESSION['file_res']['pass']) ? 'hide decrypted' : 'crypted' ?>" src="/_assets/img/svg/eye.svg" alt="Crypt/Decrypt">
-            <img class="pass__input_copy js-pass-copy <?= empty($_SESSION['file_res']['pass']) ? 'hide' : '' ?>" src="/_assets/img/svg/copy.svg" alt="Copy">
-        </div>
         <div class="pass__input pass__input_note js-field">
-            <textarea class="js-input-note js-crypt <?= empty($_SESSION['file_res']['note']) ? 'decrypted empty' : 'crypted' ?>" name="note" autocomplete="off" rows="8" cols="80" <?= empty($_SESSION['file_res']['note']) ? '' : 'disabled' ?>><?= $_SESSION['file_res']['note'] ?></textarea>
-            <img class="pass__input_crypt textarea_crypt js-crypt-decrypt <?= empty($_SESSION['file_res']['note']) ? 'hide decrypted' : 'crypted' ?>" src="/_assets/img/svg/eye.svg" alt="Crypt/Decrypt">
-            <img class="pass__input_copy textarea_copy js-pass-copy <?= empty($_SESSION['file_res']['note']) ? 'hide' : '' ?>" src="/_assets/img/svg/copy.svg" alt="Copy">
+            <textarea class="js-input-note" name="note" autocomplete="off" rows="8" cols="80"><?= $_SESSION['file_res']['note'] ?></textarea>
         </div>
 
         <div class="pass__buttons">
-            <div class="pass__buttons_link js-pass-save hide">Сохранить</div>
+            <div class="pass__buttons_link js-pass-save">Сохранить</div>
             <div class="pass__buttons_link js-tree-path" target="<?= $_SESSION['backpath'] ?>">Отмена</div>
         </div>
     </div>

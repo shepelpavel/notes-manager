@@ -5,8 +5,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/_assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/_assets/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/_assets/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/_assets/img/favicon/safari-pinned-tab.svg" color="#262626">
-    <meta name="msapplication-TileColor" content="#666666">
+    <link rel="shortcut icon" href="/_assets/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/_assets/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">

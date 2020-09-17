@@ -23,7 +23,6 @@ $_SESSION['backpath']               = $backpath;
 $_SESSION['path']                   = $path;
 $_SESSION['thisname']               = '';
 $_SESSION['fullpath']               = $fullpath;
-//$_SESSION['file']                   = '';
 $_SESSION['file_res']               = '';
 $_SESSION['breadcrumbs']            = $breadcrumbs;
 
@@ -72,29 +71,12 @@ $_SESSION['breadcrumbs']            = $breadcrumbs;
         <div class="pass__input pass__input_title">
             <input class="js-input-title" type="text" name="title" autocomplete="off" value="">
         </div>
-        <div class="pass__input pass__input_link js-field">
-            <input class="js-input-link js-crypt decrypted empty" type="text" name="link" autocomplete="off" value="">
-            <img class="pass__input_crypt js-crypt-decrypt hide decrypted" src="/_assets/img/svg/eye.svg" alt="Crypt/Decrypt">
-            <img class="pass__input_copy js-pass-copy hide" src="/_assets/img/svg/copy.svg" alt="Copy">
-        </div>
-        <div class="pass__input pass__input_login js-field">
-            <input class="js-input-login js-crypt decrypted empty" type="text" name="login" autocomplete="off" value="">
-            <img class="pass__input_crypt js-crypt-decrypt hide decrypted" src="/_assets/img/svg/eye.svg" alt="Crypt/Decrypt">
-            <img class="pass__input_copy js-pass-copy hide" src="/_assets/img/svg/copy.svg" alt="Copy">
-        </div>
-        <div class="pass__input pass__input_pass js-field">
-            <input class="js-input-pass js-crypt decrypted empty" type="text" name="pass" autocomplete="off" value="">
-            <img class="pass__input_crypt js-crypt-decrypt hide decrypted" src="/_assets/img/svg/eye.svg" alt="Crypt/Decrypt">
-            <img class="pass__input_copy js-pass-copy hide" src="/_assets/img/svg/copy.svg" alt="Copy">
-        </div>
         <div class="pass__input pass__input_note js-field">
-            <textarea class="js-input-note js-crypt decrypted empty" name="note" autocomplete="off" rows="8" cols="80"></textarea>
-            <img class="pass__input_crypt textarea_crypt js-crypt-decrypt hide decrypted" src="/_assets/img/svg/eye.svg" alt="Crypt/Decrypt">
-            <img class="pass__input_copy textarea_copy js-pass-copy hide" src="/_assets/img/svg/copy.svg" alt="Copy">
+            <textarea class="js-input-note" name="note" autocomplete="off" rows="8" cols="80"></textarea>
         </div>
 
         <div class="pass__buttons">
-            <div class="pass__buttons_link js-newpass-save hide">Сохранить</div>
+            <div class="pass__buttons_link js-newpass-save">Сохранить</div>
             <div class="pass__buttons_link js-tree-path" target="<?= $_SESSION['backpath'] ?>">Отмена</div>
         </div>
     </div>
