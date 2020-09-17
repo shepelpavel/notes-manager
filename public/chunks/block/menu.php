@@ -4,8 +4,8 @@
         <span class="menu-trigger_line menu-trigger_line2"></span>
     </div>
     <div class="menu__inner">
-        <div class="button menu__inner_link js-add-pass">
-            Добавить пароль
+        <div class="button menu__inner_link js-add-notes">
+            Добавить заметку
         </div>
         <div class="button menu__inner_link js-add-group">
             Добавить каталог

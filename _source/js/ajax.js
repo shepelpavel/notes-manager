@@ -18,11 +18,11 @@ function getContent(path) {
     });
 }
 
-// функция получения содержимого пароля
-function getPass(name) {
+// функция получения содержимого заметки
+function getNotes(name) {
     $.ajax({
         type: 'POST',
-        url: '/core/fn/get_pass.php',
+        url: '/core/fn/get_notes.php',
         data: "name=" + name,
         success: function (data) {
             $('#page').animate({
@@ -78,11 +78,11 @@ function editGroup(name, oldname) {
     });
 }
 
-// функция получения страницы добавления пароля
-function getAddPassPage() {
+// функция получения страницы добавления заметки
+function getAddNotesPage() {
     $.ajax({
         type: 'POST',
-        url: '/core/fn/add_pass_page.php',
+        url: '/core/fn/add_notes_page.php',
         success: function (data) {
             $('#page').animate({
                 opacity: 0
@@ -97,15 +97,15 @@ function getAddPassPage() {
     });
 }
 
-// функция сохранения нового пароля
-function saveNewPass(name, arr) {
+// функция сохранения новой заметки
+function saveNewNotes(name, arr) {
     var data = {
         name: name,
         arr: arr
     };
     $.ajax({
         type: 'POST',
-        url: '/core/fn/add_new_pass.php',
+        url: '/core/fn/add_new_notes.php',
         data: data,
         success: function (data) {
             if (data == 'error') {
@@ -117,15 +117,15 @@ function saveNewPass(name, arr) {
     });
 }
 
-// функция пересохранения пароля
-function savePass(name, arr) {
+// функция пересохранения заметки
+function saveNotes(name, arr) {
     var data = {
         name: name,
         arr: arr
     };
     $.ajax({
         type: 'POST',
-        url: '/core/fn/resave_pass.php',
+        url: '/core/fn/resave_notes.php',
         data: data,
         success: function (data) {
             if (data == 'error') {
@@ -179,12 +179,12 @@ $(document).ready(function () {
         }
     });
 
-    // получение страницы пароля
-    $('body').on('click', '.js-pass-title', function () {
+    // получение страницы заметки
+    $('body').on('click', '.js-notes-title', function () {
         var target_path = $(this).attr('target');
 
         if (target_path != '' && target_path != null) {
-            getPass(target_path);
+            getNotes(target_path);
         } else {
             alert('error');
         }
@@ -211,26 +211,26 @@ $(document).ready(function () {
         }
     });
 
-    // получение страницы добавления пароля
-    $('body').on('click', '.js-add-pass', function () {
-        getAddPassPage();
+    // получение страницы добавления заметки
+    $('body').on('click', '.js-add-notes', function () {
+        getAddNotesPage();
     });
 
-    // сохранение нового пароля
-    $('body').on('click', '.js-newpass-save', function () {
+    // сохранение новой заметки
+    $('body').on('click', '.js-newnotes-save', function () {
         var name = $('.js-input-title').val();
         var arr = {
             note: $('.js-input-note').val()
         };
         if (name) {
-            saveNewPass(name, arr);
+            saveNewNotes(name, arr);
         } else {
             alert('Write name!');
         }
     });
 
-    // сохранение существующего пароля
-    $('body').on('click', '.js-pass-save', function () {
+    // сохранение существующей заметки
+    $('body').on('click', '.js-notes-save', function () {
         var u_confirm = confirm('Resave?');
 
         if (u_confirm) {
@@ -239,7 +239,7 @@ $(document).ready(function () {
                 note: $('.js-input-note').val()
             };
             if (name, arr) {
-                savePass(name, arr);
+                saveNotes(name, arr);
             } else {
                 alert('Write name!');
             }
@@ -254,7 +254,7 @@ $(document).ready(function () {
             var tree_name = $(this).closest('.js-tree-item').find('.js-tree-name');
             var target_name = $(tree_name).attr('target');
             var target_type = $(tree_name).attr('type');
-            var types = ['groups', 'passwd'];
+            var types = ['groups', 'notes'];
 
             if (target_name != '' &&
                 target_name != null &&

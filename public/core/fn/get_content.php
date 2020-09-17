@@ -98,13 +98,13 @@ $_SESSION['breadcrumbs']            = $breadcrumbs;
             <?php } ?>
             <?php foreach ($_SESSION['folders_res'] as $value) { ?>
                 <?php if (!is_dir($_SESSION['fullpath'] . '/' . $value) && stripos($value, '.json') > 0) { ?>
-                    <div class="tree__item tree__item_passwd js-tree-item">
-                        <div class="tree__item_link js-pass-title js-tree-name" target="<?= $_SESSION['path'] . '/' . $value ?>" type="passwd">
+                    <div class="tree__item tree__item_notes js-tree-item">
+                        <div class="tree__item_link js-notes-title js-tree-name" target="<?= $_SESSION['path'] . '/' . $value ?>" type="notes">
                             <?= substr($value, 0, strrpos($value, '.json')) ?>
                         </div>
                         <div class="tree__item_more js-more">
                             <div class="more__modal js-more-modal">
-                                <div class="more__modal_item more__modal_item_edit js-pass-title js-tree-name" target="<?= $_SESSION['path'] . '/' . $value ?>" type="passwd">
+                                <div class="more__modal_item more__modal_item_edit js-notes-title js-tree-name" target="<?= $_SESSION['path'] . '/' . $value ?>" type="notes">
                                     <img src="/_assets/img/svg/edit.svg" alt="Edit">
                                     Изменить
                                 </div>

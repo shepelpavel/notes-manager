@@ -1,17 +1,17 @@
-# pass-manager
+# notes-manager
 
-Менеджер паролей для одного пользователя на сервере пользователя.
+Менеджер заметок для одного или не очень пользователя на сервере пользователя.
 
 ### apache conf:
 
 ```
 <VirtualHost *:80>
-    ServerName pass-manager
-    DocumentRoot /var/www/pass-manager/public
-    <Directory /var/www/pass-manager/public>
+    ServerName notes-manager
+    DocumentRoot /var/www/notes-manager/public
+    <Directory /var/www/notes-manager/public>
         AuthType Basic
         AuthName "Admin zone"
-        AuthUserFile /var/www/pass-manager/.htpasswd
+        AuthUserFile /var/www/notes-manager/.htpasswd
         Require valid-user
     </Directory>
 </VirtualHost>

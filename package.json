@@ -1,17 +1,17 @@
 {
-  "name": "pass-manager",
+  "name": "notes-manager",
   "version": "0.0.1",
-  "description": "password manager",
+  "description": "notes manager",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/shepelpavel/pass-manager.git"
+    "url": "git+https://github.com/shepelpavel/notes-manager.git"
   },
   "keywords": [
-    "pass",
+    "notes",
     "manager"
   ],
   "author": "Shepel",
@@ -33,7 +33,7 @@
     "pump": "^2.0.0"
   },
   "bugs": {
-    "url": "https://gitlab.com/shepelpavel/pass-manager/issues"
+    "url": "https://github.com/shepelpavel/notes-manager/issues"
   },
-  "homepage": "https://gitlab.com/shepelpavel/pass-manager#README"
+  "homepage": "https://github.com/shepelpavel/notes-manager#README"
 }

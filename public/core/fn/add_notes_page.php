@@ -67,17 +67,17 @@ $_SESSION['breadcrumbs']            = $breadcrumbs;
         </div>
     <?php } ?>
 
-    <div class="pass">
-        <div class="pass__input pass__input_title">
+    <div class="notes">
+        <div class="notes__input notes__input_title">
             <input class="js-input-title" type="text" name="title" autocomplete="off" value="">
         </div>
-        <div class="pass__input pass__input_note js-field">
+        <div class="notes__input notes__input_note js-field">
             <textarea class="js-input-note" name="note" autocomplete="off" rows="8" cols="80"></textarea>
         </div>
 
-        <div class="pass__buttons">
-            <div class="pass__buttons_link js-newpass-save">Сохранить</div>
-            <div class="pass__buttons_link js-tree-path" target="<?= $_SESSION['backpath'] ?>">Отмена</div>
+        <div class="notes__buttons">
+            <div class="notes__buttons_link js-newnotes-save">Сохранить</div>
+            <div class="notes__buttons_link js-tree-path" target="<?= $_SESSION['backpath'] ?>">Отмена</div>
         </div>
     </div>
 
