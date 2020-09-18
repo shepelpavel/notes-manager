@@ -93,6 +93,7 @@ function getNotes(name) {
                 opacity: 0
             }, 300, function () {
                 $('#page').html(data);
+                $('#editor').text(decodeURIComponent(escape(window.atob($('#editor').text()))));
                 $(window).scrollTop(0);
                 CKEDITOR.replace('editor', editor_settings);
             });
@@ -286,7 +287,7 @@ $(document).ready(function () {
     $('body').on('click', '.js-newnotes-save', function () {
         var name = $('.js-input-title').val();
         var arr = {
-            note: CKEDITOR.instances.editor.getData()
+            note: window.btoa(unescape(encodeURIComponent(CKEDITOR.instances.editor.getData())))
         };
         if (name) {
             saveNewNotes(name, arr);
@@ -302,7 +303,7 @@ $(document).ready(function () {
         if (u_confirm) {
             var name = $('.js-input-title').val();
             var arr = {
-                note: CKEDITOR.instances.editor.getData()
+                note: window.btoa(unescape(encodeURIComponent(CKEDITOR.instances.editor.getData())))
             };
             if (name, arr) {
                 saveNotes(name, arr);
