@@ -156,6 +156,7 @@ function getAddNotesPage() {
                 $('#page').html(data);
                 $(window).scrollTop(0);
                 CKEDITOR.replace('editor', editor_settings);
+                $('.js-input-title').focus();
             });
             $('#page').animate({
                 opacity: 1
